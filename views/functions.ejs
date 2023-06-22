@@ -1,0 +1,58 @@
+<%function getRandomInt(max) {%>
+    <%return Math.floor(Math.random() * max);%>
+<% }%>
+<%function getRandomNoun() {%>
+    <%return data[0][getRandomInt(data[0].length)].word;%>
+<% }%>
+<%function getRandomAdjective() {%>
+    <%return data[1][getRandomInt(data[1].length)].word;%>
+<% }%>
+<%function getRandomPlace() {%>
+    <%return data[2][getRandomInt(data[2].length)].word;%>
+<% }%>
+
+<%function getAdjectivePlace() {%>
+   <%return getRandomAdjective()+" "+ getRandomPlace();%>
+<% }%>
+
+<%function gettheAdjectivePlace() {%>
+    <%return "The "+getRandomAdjective()+" "+ getRandomPlace();%>
+ <% }%>
+
+<%function getPlaceofNoun() {%>
+    <%return getRandomPlace()+" of (the)"+ getRandomNoun();%>
+ <% }%>
+
+ <%function getthePlaceAdjective() {%>
+    <%return "The "+getRandomPlace()+" "+ getRandomAdjective();%>
+ <% }%>
+ <%function getNounPlace() {%>
+    <%return getRandomNoun()+" "+ getRandomPlace();%>
+ <% }%>
+ 
+ <%function getNounNounPlace() {%>
+    <%return getRandomNoun()+" "+getRandomNoun()+" "+ getRandomPlace();%>
+ <% }%>
+ <%function getNounsAdjectivePlace() {%>
+    <%return getRandomNoun()+"'s "+ getRandomAdjective()+" "+ getRandomPlace();%>
+ <% }%>
+ <%function getAdjectivePlaceofNoun() {%>
+    <%return getRandomAdjective()+" "+ getRandomPlace()+" of (the)"+ getRandomNoun();%>
+ <% }%>
+ <%function getThePlace() {%>
+    <%return "The "+ getRandomPlace();%>
+ <% }%>
+ <%function getTheAdjectiveNoun() {%>
+    <%return "The "+getRandomAdjective()+" "+ getRandomNoun();%>
+ <% }%>
+
+ <p><%= getAdjectivePlace(); %></p>
+        <p><%= gettheAdjectivePlace(); %></p>
+        <p><%= getPlaceofNoun(); %></p>
+        <p><%= getthePlaceAdjective(); %></p>
+        <p><%= getNounPlace(); %></p>
+        <p><%= getNounNounPlace(); %></p>
+        <p><%= getNounsAdjectivePlace(); %></p>
+        <p><%= getAdjectivePlaceofNoun() %></p>
+        <p><%= getThePlace(); %></p>
+        <p><%= getTheAdjectiveNoun(); %></p>

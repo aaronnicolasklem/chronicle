@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <%- include('functions'); %>
+    
+
+   
+        
+    <div>
+        
+    </div>
+  
+
+
+
+
+
+
+
+    <div >
+        <h2>Nouns</h2>
+        <% for (var n=0; n<data[0].length;n++) {%>
+            <p class="word">
+                <%=(data[0][n].word) %>
+            </p>
+            <% } %>
+    </div>
+
+    <div >
+        <h2>Adjectives</h2>
+        <% for (var n=0; n<data[1].length;n++) {%>
+            <p class="word">
+                <%=(data[1][n].word) %>
+            </p>
+            <% } %>
+
+    </div>
+
+    <div >
+        <h2>Places</h2>
+        <% for (var n=0; n<data[2].length;n++) {%>
+            <p class="word">
+                <%=(data[2][n].word) %>
+            </p>
+            <% } %>
+
+    </div>
+</body>
+
+</html>
+
+<style>
+    .word {
+        background-color: aquamarine;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .case {
+        display: inline-block;
+        padding: 5px;
+        max-width: 30%;
+    }
+</style>
